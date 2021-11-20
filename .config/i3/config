@@ -2,7 +2,7 @@
 # i3 config file bayron cua
 
 exec_always --no-startup-id autotiling
-exec_always /home/bayronq/.config/i3/wallpaper.sh
+exec_always ~/.config/i3/wallpaper.sh
 exec picom -b -f
 exec dunst
 exec_always nm-applet

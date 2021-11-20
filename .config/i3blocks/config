@@ -25,7 +25,7 @@ color=#eeeeee
 #color=#f12711
 
 [pacman-updates]
-command=/home/bayronq/.config/i3blocks/pac-update.py
+command=~/.config/i3blocks/pac-update.py
 markup=pango
 interval=3600
 QUIET=true
@@ -37,14 +37,14 @@ LABEL=
 signal=3
 
 [spotify]
-command=/home/bayronq/.config/i3blocks/spotify.sh
+command=~/.config/i3blocks/spotify.sh
 interval=3
 markup=pango
 color=#1ED760
 border=#1ED760
 
 [caps]
-command=/home/bayronq/.config/i3blocks/caps.sh
+command=~/.config/i3blocks/caps.sh
 interval=once
 color=#ffffff
 background=#9f5500
@@ -53,7 +53,7 @@ min_width=80
 signal=2
 
 [cpu]
-command=/home/bayronq/.config/i3blocks/cpu
+command=~/.config/i3blocks/cpu
 interval=persist
 markup=pango
 color=#dfd932
@@ -62,7 +62,7 @@ min_width=70
 align=right
 
 [memoria]
-command=/home/bayronq/.config/i3blocks/memoria.sh
+command=~/.config/i3blocks/memoria.sh
 interval=30
 color=#52aeff
 border=#52aeff
@@ -75,7 +75,7 @@ color=#91E78B
 border=#91E78B
 
 [volume]
-command=/home/bayronq/.config/i3blocks/volume.sh
+command=~/.config/i3blocks/volume.sh
 #LABEL=♪ 
 LABEL=VOL 
 interval=once
@@ -98,11 +98,11 @@ border=#49ffed
 command=echo "Hello, $USER!"
 interval=once
 
-#[battery]
-#command=/home/bayronq/.config/i3blocks/batt.py
-#markup=pango
-#interval=30
-#border=#3192d4
+[battery]
+command=~/.config/i3blocks/batt.py
+markup=pango
+interval=30
+border=#3192d4
 
 [time]
 command=date +'%d/%m/%Y %H:%M'
