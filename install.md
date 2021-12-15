@@ -12,3 +12,8 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 #Add the following to your .zshrc:
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+#Buscador fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+

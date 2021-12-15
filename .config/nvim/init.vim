@@ -31,6 +31,21 @@ map <F2> :belowright terminal<CR>
 map <C-s> :source ~/.config/nvim/init.vim <CR>
 
 
+"Guardar Archivos
+nmap <leader>w :w <CR>
+"Cerrar Ventana
+nmap <leader>q :q <CR>
+
+
+
+"simular scape
+imap jk <Esc>
+imap <C-c> <Esc>
+
+"Mover bloques de código
+xnoremap K :move '<-2<CR>gv-gv
+xnoremap J :move '<+1<CR>gv-gv
+
 "split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -40,6 +55,8 @@ nnoremap <C-H> <C-W><C-H>
 " Appearance {{{
     set encoding=UTF-8
     syntax on
+    set clipboard=unnamed
+    set mouse=a
     set autoread 
     set number " show line numbers
     set nu rnu  "ver la linea donde estamos
@@ -66,6 +83,7 @@ nnoremap <C-H> <C-W><C-H>
     set updatetime=300
     set signcolumn=yes
     set shortmess+=c
+    let mapleader = " "
 
 " Status Line (muestra el directorio y archivo actual editando)
     set statusline=
@@ -86,7 +104,6 @@ nnoremap <C-H> <C-W><C-H>
         source $HOME/.config/nvim/themes/onedark.vim
         "colorscheme onedark
     endif
-    syntax on
     filetype plugin indent on
     " make the highlighting of tabs and other non-text less annoying
     highlight SpecialKey ctermfg=19 guifg=#333333
