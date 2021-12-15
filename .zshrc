@@ -1,11 +1,9 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
@@ -28,12 +26,13 @@ export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 #ZSH_THEME="random"
 #ZSH_THEME="obraun"
 #ZSH_THEME="suvash"
-#ZSH_THEME="powerlevel10k/powerlevel10k"
+#ZSH_THEME="gnzh"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Add wisely, as too many plugins slow down shell startup.
-#plugins=(git)
+plugins=(git zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.sh
@@ -41,7 +40,7 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.sh
 #source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 #Tema para oh my posh
-eval "$(oh-my-posh --init --shell zsh --config ~/.poshthemes/patriksvensson.omp.json)"
+#eval "$(oh-my-posh --init --shell zsh --config ~/.poshthemes/patriksvensson.omp.json)"
 
 # export LANG=en_US.UTF-8
 #Funciones
@@ -53,9 +52,8 @@ eval "$(oh-my-posh --init --shell zsh --config ~/.poshthemes/patriksvensson.omp.
    export EDITOR='nvim'
  fi
 
-
 # pack unpack
-extract (){
+extraer (){
 	if [ -f $1 ]; then
 		case $1 in
 			*.tar.bz2)	tar xvjf $1 ;;
@@ -77,14 +75,13 @@ extract (){
 }
 
 
-
 # Alias
 alias rz='source ~/.zshrc'
 alias a="sudo nvim ~/.config/alacritty/alacritty.yml"
 alias servicios='sudo systemctl list-unit-files --state=enabled'
 alias peso='du -sh * .[A-z0-9]* | sort -n'
 alias v="nvim"
-alias z="sudo nvim ~/.zshrc"
+alias z="nvim ~/.zshrc"
 alias rm="rm -rf"
 
 # Arch
