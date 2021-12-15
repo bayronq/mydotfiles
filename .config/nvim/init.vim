@@ -21,6 +21,8 @@ call plug#end()
 
 "==================== Configuraciones Generales ============================
 
+let mapleader = " "
+
 let g:NERDTreeChDirMode = 2  " Cambia el directorio actual al nodo padre actual
 
 " Abrir/cerrar NERDTree con Ctrl+n
@@ -83,7 +85,6 @@ nnoremap <C-H> <C-W><C-H>
     set updatetime=300
     set signcolumn=yes
     set shortmess+=c
-    let mapleader = " "
 
 " Status Line (muestra el directorio y archivo actual editando)
     set statusline=
