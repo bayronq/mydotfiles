@@ -1,5 +1,6 @@
 "LLama al tema de airline
 source $HOME/.config/nvim/themes/airline.vim
+source $HOME/.config/nvim/plug-config.vim
 
 "------------------- Plugins (VimPlug) -------------------------------------
 call plug#begin('~/.local/share/nvim/plugged')
@@ -16,6 +17,8 @@ Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dylanaraps/wal.vim'
+Plug 'arcticicestudio/nord-vim'
+
 
 call plug#end()
 
@@ -102,8 +105,8 @@ nnoremap <C-H> <C-W><C-H>
     else
         let g:onedark_termcolors=16
         let g:onedark_terminal_italics=1
-        source $HOME/.config/nvim/themes/onedark.vim
-        "colorscheme onedark
+        "source $HOME/.config/nvim/themes/onedark.vim
+        colorscheme nord
     endif
     filetype plugin indent on
     " make the highlighting of tabs and other non-text less annoying
