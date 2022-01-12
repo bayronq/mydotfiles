@@ -1,4 +1,12 @@
-"LLama al tema de airline
+"█╗███╗░░██╗██╗████████╗░░░██╗░░░██╗██╗███╗░░░███╗
+"██║████╗░██║██║╚══██╔══╝░░░██║░░░██║██║████╗░████║
+"██║██╔██╗██║██║░░░██║░░░░░░╚██╗░██╔╝██║██╔████╔██║
+"██║██║╚████║██║░░░██║░░░░░░░╚████╔╝░██║██║╚██╔╝██║
+"██║██║░╚███║██║░░░██║░░░██╗░░╚██╔╝░░██║██║░╚═╝░██║ 
+"╚═╝╚═╝░░╚══╝╚═╝░░░╚═╝░░░╚═╝░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝
+"𝕓𝕪 bayronq
+
+"------------------------ Fuentes ------------------------------------------
 source $HOME/.config/nvim/themes/airline.vim
 source $HOME/.config/nvim/plug-config.vim
 
@@ -14,10 +22,16 @@ Plug 'https://github.com/scrooloose/nerdtree'
 Plug 'vim-scripts/fountain.vim'
 "Apariencia
 Plug 'joshdick/onedark.vim'
+"Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'dylanaraps/wal.vim'
 Plug 'arcticicestudio/nord-vim'
+"NERDTREE
+Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+" Stable version of coc
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 
 call plug#end()
@@ -39,8 +53,7 @@ map <C-s> :source ~/.config/nvim/init.vim <CR>
 "Guardar Archivos
 nmap <leader>w :w <CR>
 "Cerrar Ventana
-nmap <leader>q :q <CR>
-
+nmap <leader>q :q! <CR>
 
 
 "simular scape
@@ -57,7 +70,7 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" Appearance {{{
+" Apariencia {{{
     set encoding=UTF-8
     syntax on
     set clipboard=unnamed
@@ -120,6 +133,3 @@ nnoremap <C-H> <C-W><C-H>
     " highlight Type cterm=italic term=italic gui=italic
     highlight Normal ctermbg=none
 " }}}
-
-" vim:set foldmethod=marker foldlevel=0
-

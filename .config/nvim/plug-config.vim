@@ -18,7 +18,7 @@ let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline#extensions#tabline#right_sep = ''
 let g:airline#extensions#tabline#right_alt_sep = ''
 let g:ariline_powerline_fonts = 1
-let g:ariline_theme='onedark'
+"let g:ariline_theme='onedark'
 
   if !exists('g:airline_symbols')
     let g:airline_symbols = {}
@@ -34,7 +34,7 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
 " Switch to your current theme
-let g:airline_theme = 'onedark'
+let g:airline_theme = 'nord'
 
 " Always show tabs
 set showtabline=2
