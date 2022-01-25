@@ -26,8 +26,8 @@ export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 #ZSH_THEME="random"
 #ZSH_THEME="obraun"
 #ZSH_THEME="suvash"
-#ZSH_THEME="gnzh"
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="gnzh"
+#ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
@@ -35,7 +35,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.sh
 #source /usr/share/oh-my-zsh/oh-my-zsh.sh
 #source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
