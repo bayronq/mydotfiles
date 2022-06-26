@@ -35,9 +35,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.sh
-#source /usr/share/oh-my-zsh/oh-my-zsh.sh
-#source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+#source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.sh
 
 #Tema para oh my posh
 #eval "$(oh-my-posh --init --shell zsh --config ~/.poshthemes/patriksvensson.omp.json)"
@@ -108,8 +106,7 @@ alias fetch='git fetch'
 alias pull='git pull origin'
 alias push='git push origin'
 alias stat='git status'  # 'status' is protected name so using 'stat' instead
-alias tag='git tag'
-alias newtag='git tag -a'
+alias gl='git log --oneline --decorate --all --graph'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
