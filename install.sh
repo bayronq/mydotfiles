@@ -16,9 +16,6 @@ cp ~/Repo/mydotfiles/.p10k.zsh ~/.p10k.zsh
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
-rm ~/.zshrc
-cp ~/Repo/mydotfiles/.zshrc ~/.zshrc
-
 #Instalación de Plugins en neovim
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 ; nvim
 
@@ -27,6 +24,10 @@ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 ; nvim
 
 #copiar carpeta nvim al pat:
 #cp ~/Repo/mydotfiles/.config/nvim ~/.config/nvim
+
+rm ~/.zshrc
+cp ~/Repo/mydotfiles/.zshrc ~/.zshrc
+
 
 
 #reiniciar archivo init.vim

@@ -6,6 +6,10 @@ fi
 
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+http_proxy=http://sis.ms.bayron.cua:xx@proxy-adm.bdr:88/
+https_proxy=http://sis.ms.bayron.cua:xx@proxy-adm.bdr:88/
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export JAVA_HOME=/u01/app/jdk
@@ -111,5 +115,16 @@ alias push='git push origin'
 alias stat='git status'  # 'status' is protected name so using 'stat' instead
 alias gl='git log --oneline --decorate --all --graph'
 
+#ALIAS IBM WAS
+alias dmgr='cd /IBM/WebSphere/AppServer/profiles/Dmgr01/bin'
+alias iniciardmgr='dmgr && ./startManager.sh'
+alias nodo="cd /IBM/WebSphere/AppServer/profiles/AppSrv01/bin"
+alias iniciarnodo='nodo && ./startNode.sh'
+alias logs='cd /IBM/WebSphere/AppServer/profiles/AppSrv01/logs'
+alias ver='tail -f SystemOut.log'
+alias err='tail -f SystemErr.log'
+alias was='cd /IBM/WebSphere/AppServer/bin'
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
