@@ -10,10 +10,18 @@ fi
 http_proxy=http://sis.ms.bayron.cua:xx@proxy-adm.bdr:88/
 https_proxy=http://sis.ms.bayron.cua:xx@proxy-adm.bdr:88/
 
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export PATH=$PATH:$HOME/scripts
+
+#Path Java
 export JAVA_HOME=/u01/app/jdk
 export PATH=$JAVA_HOME/bin:$PATH
+
+#Path Oracle DB
+export ORACLE_HOME=/opt/oracle/product/21c/dbhomeXE
+export ORACLE_SID=XE
 
 # Path Weblogic
 export PATCH_TOP=/install/weblogicpatch
@@ -30,8 +38,8 @@ export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 #ZSH_THEME="random"
 #ZSH_THEME="obraun"
 #ZSH_THEME="suvash"
-#ZSH_THEME="gnzh"
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="gnzh"
+#ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
@@ -39,9 +47,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-#source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.sh
-#source /usr/share/oh-my-zsh/oh-my-zsh.sh
-#source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 #Tema para oh my posh
 #eval "$(oh-my-posh --init --shell zsh --config ~/.poshthemes/patriksvensson.omp.json)"
@@ -104,15 +109,13 @@ alias cleanyay="yay -Sc --aur"
 
 # git
 alias addup='git add -u'
-alias add='git add .'
-alias branch='git branch'
-alias checkout='git checkout'
+alias ga='git add .'
 alias clone='git clone'
-alias commit='git commit -m'
-alias fetch='git fetch'
+alias gc='git commit -m'
+alias gf='git fetch'
 alias pull='git pull origin'
 alias push='git push origin'
-alias stat='git status'  # 'status' is protected name so using 'stat' instead
+alias gs='git status'  # 'status' is protected name so using 'stat' instead
 alias gl='git log --oneline --decorate --all --graph'
 
 #ALIAS IBM WAS
@@ -128,3 +131,4 @@ alias was='cd /IBM/WebSphere/AppServer/bin'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(starship init zsh)"

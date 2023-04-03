@@ -25,10 +25,11 @@ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 ; nvim
 #copiar carpeta nvim al pat:
 #cp ~/Repo/mydotfiles/.config/nvim ~/.config/nvim
 
-rm ~/.zshrc
+#instalador starship
+curl -sS https://starship.rs/install.sh | sh
+
+mv ~/.zshrc ~/.zshrc.bk  
 cp ~/Repo/mydotfiles/.zshrc ~/.zshrc
-
-
 
 #reiniciar archivo init.vim
 #source ~/.confing/nvim/init.vim
