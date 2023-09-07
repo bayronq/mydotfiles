@@ -10,7 +10,6 @@ fi
 http_proxy=http://sis.ms.bayron.cua:xx@proxy-adm.bdr:88/
 https_proxy=http://sis.ms.bayron.cua:xx@proxy-adm.bdr:88/
 
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export PATH=$PATH:$HOME/scripts
@@ -45,8 +44,8 @@ ZSH_THEME="gnzh"
 
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-syntax-highlighting)
-source $ZSH/oh-my-zsh.sh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $ZSH/oh-my-zsh.sh
 
 #Tema para oh my posh
 #eval "$(oh-my-posh --init --shell zsh --config ~/.poshthemes/patriksvensson.omp.json)"
@@ -83,7 +82,6 @@ extraer (){
 	fi
 }
 
-
 # Alias
 alias rz='source ~/.zshrc'
 alias a="nvim ~/.config/alacritty/alacritty.yml"
@@ -91,7 +89,6 @@ alias servicios='sudo systemctl list-unit-files --state=enabled'
 alias peso='du -sh * .[A-z0-9]* | sort -n'
 alias v="nvim"
 alias z="nvim ~/.zshrc"
-alias rm="rm -rf"
 alias ls="lsd"
 
 # Arch
