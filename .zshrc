@@ -7,15 +7,15 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-http_proxy=http://sis.ms.bayron.cua:xx@proxy-adm.bdr:88/
-https_proxy=http://sis.ms.bayron.cua:xx@proxy-adm.bdr:88/
+#!/bin/bashhttp_proxy=http://sis.ms.bayron.cua:xx@proxy-adm.bdr:88/
+#!/bin/bashhttps_proxy=http://sis.ms.bayron.cua:xx@proxy-adm.bdr:88/
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export PATH=$PATH:$HOME/scripts
 
 #Path Java
-export JAVA_HOME=/u01/app/jdk
+export JAVA_HOME=/opt/app/jdk
 export PATH=$JAVA_HOME/bin:$PATH
 
 #Path Oracle DB
