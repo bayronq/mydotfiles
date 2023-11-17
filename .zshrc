@@ -1,3 +1,12 @@
+##  ██████╗  █████╗ ██╗   ██╗██████╗  ██████╗ ███╗   ██╗ ██████╗ 
+##  ██╔══██╗██╔══██╗╚██╗ ██╔╝██╔══██╗██╔═══██╗████╗  ██║██╔═══██╗
+##  ██████╔╝███████║ ╚████╔╝ ██████╔╝██║   ██║██╔██╗ ██║██║   ██║
+##  ██╔══██╗██╔══██║  ╚██╔╝  ██╔══██╗██║   ██║██║╚██╗██║██║▄▄ ██║
+##  ██████╔╝██║  ██║   ██║   ██║  ██║╚██████╔╝██║ ╚████║╚██████╔╝
+##  ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝ ╚══▀▀═╝
+
+
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -7,15 +16,16 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-#!/bin/bashhttp_proxy=http://sis.ms.bayron.cua:xx@proxy-adm.bdr:88/
-#!/bin/bashhttps_proxy=http://sis.ms.bayron.cua:xx@proxy-adm.bdr:88/
+#http_proxy=http://sis.ms.bayron.cua:xx@proxy-adm.bdr:88/
+#https_proxy=http://sis.ms.bayron.cua:xx@proxy-adm.bdr:88/
+
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export PATH=$PATH:$HOME/scripts
 
 #Path Java
-export JAVA_HOME=/opt/app/jdk
+export JAVA_HOME=/u01/app/jdk
 export PATH=$JAVA_HOME/bin:$PATH
 
 #Path Oracle DB
@@ -43,9 +53,9 @@ ZSH_THEME="gnzh"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting)
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+plugins=(git zsh-syntax-highlighting sudo)
 source $ZSH/oh-my-zsh.sh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 #Tema para oh my posh
 #eval "$(oh-my-posh --init --shell zsh --config ~/.poshthemes/patriksvensson.omp.json)"
@@ -82,6 +92,7 @@ extraer (){
 	fi
 }
 
+
 # Alias
 alias rz='source ~/.zshrc'
 alias a="nvim ~/.config/alacritty/alacritty.yml"
@@ -89,6 +100,7 @@ alias servicios='sudo systemctl list-unit-files --state=enabled'
 alias peso='du -sh * .[A-z0-9]* | sort -n'
 alias v="nvim"
 alias z="nvim ~/.zshrc"
+alias rm="rm -rf"
 alias ls="lsd"
 
 # Arch
@@ -129,3 +141,5 @@ alias was='cd /IBM/WebSphere/AppServer/bin'
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(starship init zsh)"
+
+pfetch
