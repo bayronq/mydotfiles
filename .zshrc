@@ -81,7 +81,7 @@ extraer (){
 			*.zip)		unzip $1 ;;
 			*.Z)		uncompress $1 ;;
 			*.7z)		7z x $1 ;;
-      *.tar.xz  tar xvf $1 ;;
+      *.tar.xz)  tar xvf $1 ;;
 			*)	echo "No se reconoce el tipo de archivo '$1'...";;
 		esac
 	else
