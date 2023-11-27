@@ -1,4 +1,5 @@
 #!/bin/bash
+
 #oh my zshrc
 #sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
@@ -16,6 +17,12 @@ cp ~/Repo/mydotfiles/.p10k.zsh ~/.p10k.zsh
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
+#instalador starship
+curl -sS https://starship.rs/install.sh | sh
+
+mv ~/.zshrc ~/.zshrc.bk
+cp ~/Repo/mydotfiles/.zshrc ~/.zshrc
+
 #LazyVim
 git clone https://github.com/LazyVim/starter ~/.config/nvim
 
@@ -25,12 +32,6 @@ git clone https://github.com/LazyVim/starter ~/.config/nvim
 #curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 #copiar carpeta nvim al pat:
 #cp ~/Repo/mydotfiles/.config/nvim ~/.config/nvim
-
-#instalador starship
-curl -sS https://starship.rs/install.sh | sh
-
-mv ~/.zshrc ~/.zshrc.bk
-cp ~/Repo/mydotfiles/.zshrc ~/.zshrc
 
 #reiniciar archivo init.vim
 #source ~/.confing/nvim/init.vim

@@ -6,7 +6,6 @@
 ##  ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝ ╚══▀▀═╝
 
 
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -25,7 +24,8 @@ export ZSH="$HOME/.oh-my-zsh"
 export PATH=$PATH:$HOME/scripts
 
 #Path Java
-export JAVA_HOME=/u01/app/jdk
+export JAVA_HOME=/opt/jdk
+#export JAVA_HOME=/u01/app/jdk
 export PATH=$JAVA_HOME/bin:$PATH
 
 #Path Oracle DB
@@ -42,11 +42,7 @@ export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="cloud"
-#ZSH_THEME="alanpeabody"
 #ZSH_THEME="random"
-#ZSH_THEME="obraun"
-#ZSH_THEME="suvash"
 ZSH_THEME="gnzh"
 #ZSH_THEME="powerlevel10k/powerlevel10k"
 
@@ -85,6 +81,7 @@ extraer (){
 			*.zip)		unzip $1 ;;
 			*.Z)		uncompress $1 ;;
 			*.7z)		7z x $1 ;;
+      *.tar.xz  tar xvf $1 ;;
 			*)	echo "No se reconoce el tipo de archivo '$1'...";;
 		esac
 	else
