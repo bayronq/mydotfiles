@@ -8,6 +8,7 @@
 
 "------------------------ Fuentes ------------------------------------------
 source $HOME/.config/nvim/themes/airline.vim
+source $HOME/.config/nvim/themes/onedark.vim
 source $HOME/.config/nvim/plug-config.vim
 
 "------------------- Plugins (VimPlug) -------------------------------------
@@ -118,8 +119,7 @@ nnoremap <C-H> <C-W><C-H>
     else
         let g:onedark_termcolors=16
         let g:onedark_terminal_italics=1
-        "source $HOME/.config/nvim/themes/onedark.vim
-        colorscheme nord
+        colorscheme onedark
     endif
     filetype plugin indent on
     " make the highlighting of tabs and other non-text less annoying
