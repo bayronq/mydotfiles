@@ -13,19 +13,16 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
 #http_proxy=http://sis.ms.bayron.cua:xx@proxy-adm.bdr:88/
 #https_proxy=http://sis.ms.bayron.cua:xx@proxy-adm.bdr:88/
-
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export PATH=$PATH:$HOME/scripts
 
 #Path Java
-export JAVA_HOME=/opt/jdk
 #export JAVA_HOME=/u01/app/jdk
+export JAVA_HOME=/opt/jdk
 export PATH=$JAVA_HOME/bin:$PATH
 
 #Path Oracle DB
@@ -46,15 +43,10 @@ export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 ZSH_THEME="gnzh"
 #ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting sudo)
+plugins=(zsh-syntax-highlighting sudo) 
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-#Tema para oh my posh
-#eval "$(oh-my-posh --init --shell zsh --config ~/.poshthemes/patriksvensson.omp.json)"
 
 # export LANG=en_US.UTF-8
 #Funciones
@@ -70,18 +62,18 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 extraer (){
 	if [ -f $1 ]; then
 		case $1 in
-			*.tar.bz2)	tar xvjf $1 ;;
-			*.tar.gz)	tar xvzf $1 ;;
-			*.bz2)		bunzip2 $1 ;;
-			*.rar)      	rar x $1 ;;
-			*.gz)	   	gunzip $1 ;;
-			*.tar)		tar xvf $1 ;;
-			*.tbz2)		tar xvjf $1;;
-			*.tgz)		tar xvzf $1 ;;
-			*.zip)		unzip $1 ;;
-			*.Z)		uncompress $1 ;;
-			*.7z)		7z x $1 ;;
-      *.tar.xz)  tar xvf $1 ;;
+			*.tar.bz2)	    tar xvjf $1 ;;
+			*.tar.gz)	    tar xvzf $1 ;;
+			*.bz2)		    bunzip2 $1 ;;
+			*.rar)      	    rar x $1 ;;
+			*.gz)	   	    gunzip $1 ;;
+			*.tar)		    tar xvf $1 ;;
+			*.tbz2)		    tar xvjf $1;;
+			*.tgz)		    tar xvzf $1 ;;
+			*.zip)		    unzip $1 ;;
+			*.Z)		    uncompress $1 ;;
+			*.7z)		    7z x $1 ;;
+      			*.tar.xz)   	    tar xvf $1 ;;
 			*)	echo "No se reconoce el tipo de archivo '$1'...";;
 		esac
 	else
@@ -99,6 +91,8 @@ alias v="nvim"
 alias z="nvim ~/.zshrc"
 alias rm="rm -rf"
 alias ls="lsd"
+alias u="sudo apt-get update -y && sudo apt-get upgrade -y"
+alias r="rsync -ar --progress --partial"
 
 # Arch
 alias s="sudo nvim ~/.config/sxhkd/sxhkdrc"
@@ -108,7 +102,7 @@ alias reloj="tty-clock -c -C 4"
 alias pacsu='sudo pacman -Syyu'                 # update only standard pkgs
 alias yaysu='yay -Syu --noconfirm'              # update standard pkgs and AUR pkgs (yay)
 alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
-alias cleanup='sudo pacman -Rns (pacman -Qtdq)'  # remove orphaned packages
+alias cleanup='sudo pacman -Rn'  # remove orphaned packages
 alias cleanyay="yay -Sc --aur"
 #alias cat="bat"
 #alias catn="/bin/cat"
@@ -138,5 +132,3 @@ alias was='cd /IBM/WebSphere/AppServer/bin'
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(starship init zsh)"
-
-pfetch
