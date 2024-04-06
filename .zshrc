@@ -14,7 +14,6 @@ fi
 
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 #http_proxy=http://sis.ms.bayron.cua:xx@proxy-adm.bdr:88/
-#https_proxy=http://sis.ms.bayron.cua:xx@proxy-adm.bdr:88/
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -22,6 +21,7 @@ export PATH=$PATH:$HOME/scripts
 
 #Path Java
 #export JAVA_HOME=/u01/app/jdk
+#export JAVA_HOME=/opt/jdk17
 export JAVA_HOME=/opt/jdk
 export PATH=$JAVA_HOME/bin:$PATH
 
@@ -63,24 +63,23 @@ extraer (){
 	if [ -f $1 ]; then
 		case $1 in
 			*.tar.bz2)	    tar xvjf $1 ;;
-			*.tar.gz)	    tar xvzf $1 ;;
-			*.bz2)		    bunzip2 $1 ;;
-			*.rar)      	    rar x $1 ;;
-			*.gz)	   	    gunzip $1 ;;
-			*.tar)		    tar xvf $1 ;;
-			*.tbz2)		    tar xvjf $1;;
-			*.tgz)		    tar xvzf $1 ;;
-			*.zip)		    unzip $1 ;;
-			*.Z)		    uncompress $1 ;;
-			*.7z)		    7z x $1 ;;
-      			*.tar.xz)   	    tar xvf $1 ;;
+			*.tar.gz)	      tar xvzf $1 ;;
+			*.bz2)		      bunzip2 $1 ;;
+			*.rar)      	  rar x $1 ;;
+			*.gz)	   	      gunzip $1 ;;
+			*.tar)		      tar xvf $1 ;;
+			*.tbz2)		      tar xvjf $1;;
+			*.tgz)		      tar xvzf $1 ;;
+			*.zip)		      unzip $1 ;;
+			*.Z)		        uncompress $1 ;;
+			*.7z)		        7z x $1 ;;
+    	*.tar.xz)   	  tar xvf $1 ;;
 			*)	echo "No se reconoce el tipo de archivo '$1'...";;
 		esac
 	else
 		echo "'$1' el archivo no es valido!"
 	fi
 }
-
 
 # Alias
 alias rz='source ~/.zshrc'
@@ -92,7 +91,7 @@ alias z="nvim ~/.zshrc"
 alias rm="rm -rf"
 alias ls="lsd"
 alias u="sudo apt-get update -y && sudo apt-get upgrade -y"
-alias r="rsync -ar --progress --partial"
+alias r="rsync -av --progress --partial"
 
 # Arch
 alias s="sudo nvim ~/.config/sxhkd/sxhkdrc"
