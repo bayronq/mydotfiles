@@ -92,6 +92,8 @@ alias rm="rm -rf"
 alias ls="lsd"
 alias u="sudo apt-get update -y && sudo apt-get upgrade -y"
 alias r="rsync -av --progress --partial"
+alias n="sudo nmap -p- -sS --min-rate 5000 --open -vvv -n -Pn $1 -oG allPorts"
+alias i="sudo apt-get install"
 
 # Arch
 alias s="sudo nvim ~/.config/sxhkd/sxhkdrc"
