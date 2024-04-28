@@ -1,8 +1,12 @@
-#LazyVim
+# INSTALAR NvChad
+git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
+
+
+# INSTALAR LazyVim
 #git clone https://github.com/LazyVim/starter ~/.config/nvim
 
+
 #Instalación de Plugins en neovim
-#git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 ; nvim
 #Descargar repo
 #curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 #copiar carpeta nvim al pat:
