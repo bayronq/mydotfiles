@@ -140,3 +140,4 @@ export NVM_DIR="$HOME/.nvm"
 
 # HOMEBREW LINUX
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+export HOMEBREW_NO_INSTALL_CLEANUP=TRUE
