@@ -139,5 +139,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # HOMEBREW LINUX
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-export HOMEBREW_NO_INSTALL_CLEANUP=TRUE
+#eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+#export HOMEBREW_NO_INSTALL_CLEANUP=TRUE
