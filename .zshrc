@@ -13,19 +13,20 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-#http_proxy=http://sis.ms.bayron.cua:xx@proxy-adm.bdr:88/
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export PATH=$PATH:$HOME/scripts
 
 #Path Java
-#export JAVA_HOME=/u01/app/jdk
-#export JAVA_HOME=/opt/jdk17
-export JAVA_HOME=/opt/jdk
+export JAVA_HOME=/opt/jdk17
 export PATH=$JAVA_HOME/bin:$PATH
 
-#Path Oracle DB
+# MAVEN
+export MAVEN_HOME=/opt/maven
+export PATH=$MAVEN_HOME/bin:$PATH
+
+# Path Oracle DB
 export ORACLE_HOME=/opt/oracle/product/21c/dbhomeXE
 export ORACLE_SID=XE
 
@@ -38,7 +39,7 @@ export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+# ZSH THEMES
 #ZSH_THEME="random"
 ZSH_THEME="gnzh"
 #ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -49,7 +50,8 @@ source $ZSH/oh-my-zsh.sh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # export LANG=en_US.UTF-8
-#Funciones
+
+# Funciones
 
 # Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
